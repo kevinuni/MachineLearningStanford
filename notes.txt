@@ -1,0 +1,73 @@
+2. Suppose a massive dataset is available for training a learning algorithm. Training on a lot of data is likely to give good performance when two of the following conditions hold true.
+
+Which are the two?
+
+
+
+- We train a learning algorithm with a large number of parameters (that is able to learn/represent fairly complex functions).
+[Correct]
+You should use a "low bias" algorithm with many parameters, as it will be able to make use of the large dataset provided. If the model has too few parameters, it will underfit the large training set.
+
+- The features xx contain sufficient information to predict yy accurately. (For example, on way to verify this is if a human expert on the domain
+can confidently predict yy when given only xx).
+[Correct]
+It is important that the features contain sufficient information, as otherwise no amount of data can solve a learning problem in which the features do not contain enough information to make an accurate prediction
+
+
+- We train a model that does not use regularization.
+[This should not be selected]
+Even with a very large dataset, some regularization is still likely to help the algorithm's performance, so you should use cross-validation to select the appropriate regularization parameter.
+
+
+- We train a learning algorithm with a small number of parameters (that is thus unlikely to overfit). 
+[This should not be selected]
+If the model has a small number of parameters, then it will underfit the large training set and not make good user of all the data
+
+- We train a model that does not use regularization.
+[This should not be selected]
+Even with a very large dataset, some regularization is still likely to help the algorithm's performance, so you should use cross-validation to select the appropriate regularization parameter.
+
+4. Suppose you are working on a spam classifier, where spa emails are positive examples (y=1y=1) and non-spam emails are negative examples (y=0y=0). You have a training set of email sin which 99% of the emails are non-spam and the other 1% is spam. Which of the following statements are true? Check all that apply.
+
+
+- If you always predict non-spam (output y=0y=0), your classifier will have 99% accuracy on the training set, and it will likely perform similarly on the cross validation set.
+[Correct]
+The classifier achieves 99% accuracy on the training set because of how skewed the classes are. We can expect that the cross-validation set will be skewed in the same fashion, so the classifier will have approximately the same accuracy.
+
+
+- If you always predict non-spam (output y=0y=0), your classifier will have an accuracy of 99%.
+[Correct]
+Since 99% of the examples are y = 0, always predicting 0 gives an accuracy of 99%. Note, however, that this is not a good spam system, as you will never catch any spam.
+
+
+- If you always predict non-spam (output y=0y=0), your classifier will have 99% accuracy on the training set, but it will do much worse on the cross
+validation set because it has overfit the training data.
+[This should not be selected]
+The classifier achieves 99% accuracy because of the skewed classes in the data, not because it is overfitting the training set. Thus, it is likely to perform just as well on the cross validation set.
+
+- A good clasifier should have both high precision and high recall on the cross validation set
+[Correct]
+Forthe data with skewed classes like these spam data,we want to achieve a hifh F1 score wich require high precision and high recall
+
+5. 
+Using a very large training set makes it unlikely for model to overfit the training data.
+[Correct]
+A sufficiently large training set will not be overfit, as the model cannot overfit some of the examples without doing poorly on the others.
+
+
+- The "error analysis" process of manually examining the examples which your algorithm got wrong can help suggest what are good steps to take (e.g., developing new features) to improve your algorithm's performance.
+[Correct]
+This process of error analysis is crucial in developing high performance learning systems, as the space of possible improvements to your system is very large, and it gives you direction about what to work on next.
+
+- Its a good idea to spend a lot of time collecting a large amount of data before builing your first version of learning algorithm
+[This should not be selected]
+you cannot know wether a huge database will be important until you have built a first version and find that the algorithm has high variance
+
+- After training a logistic reggresion classifier, you must use 0.5 as you thresold for predicting whether an example is positive or negative
+[This should not be selected]
+Yoy can and should adjust the thresold in logistic reggresion using cross validation data
+
+
+- Using a very large training set makes it unlikely for model to overfit the training data.
+[Correct]
+A sufficiently large training set will not be overfit, as the model cannot overfit some of the examples without doing poorly on the others.
